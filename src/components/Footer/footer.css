@@ -1,0 +1,35 @@
+.footer-component {
+  overflow: hidden;
+  background-color: #343638;
+  width: 100%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  
+}
+.footer-component p {
+  font-family: 'Prompt', sans-serif;
+  font-size: 1.3rem;
+  color: white;
+}
+.img-footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.footer-component img {
+  width: 65%;
+}
+
+.redes-container .redes {
+  width: 2rem;
+  height: 2rem;
+}
+
+.redes-container {
+    display: flex;
+    gap: .5rem;
+}
+

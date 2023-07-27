@@ -1,0 +1,31 @@
+.reproductor-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.reproductor-controller {
+  display: flex;
+  justify-content: center;
+}
+.reproductor-controller img {
+  width: 30%;
+}
+
+
+  
+  /* Cambiar el color del control deslizante */
+
+  
+  /* Cambiar el color del botón de volumen en navegadores WebKit (como Chrome y Safari) */
+  .reproductor-container audio::-webkit-media-controls-volume-slider {
+    background-color: blue;
+  }
+  
+  /* Cambiar el color del botón de volumen en navegadores Gecko (como Firefox) */
+  .reproductor-container audio::-moz-range-thumb {
+    background-color: green;
+  }
+  

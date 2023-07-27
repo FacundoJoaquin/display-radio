@@ -1,0 +1,17 @@
+.banner-container {
+    height: 20%;
+    content: '';
+    background-color:#DC202A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner-container p{
+    font-family: 'Prompt', sans-serif;
+    font-size: 2.3rem;
+    color: white;
+}
+.banner-container img {
+    height: 90%;
+    width: 90%;
+}
