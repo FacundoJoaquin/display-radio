@@ -17,4 +17,14 @@
   width: 30%;
 }
 
-
+@media (min-width: 768px){
+  .reproductor-container audio {
+    width: 20rem;
+  }
+  .reproductor-controller {
+    gap: 2rem;
+  }
+  .reproductor-controller img {
+    width: 12rem;
+  }
+}
