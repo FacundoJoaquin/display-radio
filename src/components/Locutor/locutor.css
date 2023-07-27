@@ -1,10 +1,10 @@
 .locutor-container {
+    height: 75%;
     display: flex;
+    align-items: flex-end;
     justify-content: center;
-    align-items: end;
 }
 
 .locutor-container img {
-    height: 60%;
-    width: 60%;
+    height: 80%;
 }

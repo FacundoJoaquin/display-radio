@@ -33,3 +33,8 @@
     gap: .5rem;
 }
 
+@media (min-width: 768px) {
+  .footer-component p {
+    font-size: 2.6rem;
+  }
+}
