@@ -8,3 +8,9 @@
 .locutor-container img {
     height: 80%;
 }
+
+@media (min-width: 768px) {
+    .locutor-container img {
+        height: 100%;
+    }
+}
