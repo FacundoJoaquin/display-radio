@@ -9,15 +9,17 @@ import "./footer.css";
 const Footer = () => {
   return (
     <div className="footer-component">
-       <div className="img-footer-container">
+      <div className="img-footer-container">
         <img src={la17} alt="" />
-        <p>www.lu17.com</p>
         <div className="redes-container">
-            <img className="redes" src={facebook} alt="" />
-            <img className="redes" src={twitter} alt="" />
-            <img className="redes" src={instagram} alt="" />
-            <img className="redes" src={tiktok} alt="" />
-            <img className="redes" src={youtube} alt="" />
+          <p>www.lu17.com</p>
+          <div className="redes-logos-div">
+            <img className="redes" src={facebook} alt="facebook" />
+            <img className="redes" src={twitter} alt="twitter" />
+            <img className="redes" src={instagram} alt="instagram" />
+            <img className="redes" src={tiktok} alt="tiktok" />
+            <img className="redes" src={youtube} alt="youtube" />
+          </div>
         </div>
       </div>
     </div>

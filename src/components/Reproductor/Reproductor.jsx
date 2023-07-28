@@ -1,18 +1,22 @@
-import play from "../../assets/play.png";
-import pause from "../../assets/pause.png";
 import "./reproductor.css";
 import { useRef, useState } from "react";
+import Pause from "../Buttons/Pause";
+import Play from "../Buttons/Play";
 
 const Reproductor = () => {
   const audioRef = useRef(null);
   console.log(audioRef);
   const [volume, setVolume] = useState(1);
+  const [isPlaying, setIsPlaying] = useState(false); // Estado para rastrear la reproducción
 
   const handlePlay = () => {
     audioRef.current.play();
+    setIsPlaying(true); // Actualizar el estado a true cuando empieza a reproducirse
   };
+
   const handlePause = () => {
     audioRef.current.pause();
+    setIsPlaying(false); // Actualizar el estado a false cuando se pausa la reproducción
   };
 
   const handleVolumeChange = (event) => {
@@ -45,18 +49,8 @@ const Reproductor = () => {
       </div>
 
       <div className="reproductor-controller">
-        <img
-          src={pause}
-          alt=""
-          onClick={handlePause}
-          style={{ cursor: "pointer" }}
-        />
-        <img
-          src={play}
-          alt=""
-          onClick={handlePlay}
-          style={{ cursor: "pointer" }}
-        />
+        <Pause onClick={handlePause} isPlaying={isPlaying} />
+        <Play onClick={handlePlay} isPlaying={isPlaying} />
       </div>
     </div>
   );

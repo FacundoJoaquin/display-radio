@@ -2,9 +2,10 @@
   overflow: hidden;
   background-color: #343638;
   width: 100%;
-  height: 80%;
+  height: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  margin-top: 1rem;
   justify-content: center;
 }
 .footer-component p {
@@ -17,12 +18,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+
 }
 .footer-component img {
   width: 65%;
 }
-
+.redes-logos-div {
+  display: flex;
+  justify-content: space-between;
+}
 .redes-container .redes {
   width: 2rem;
   height: 2rem;
@@ -30,20 +34,25 @@
 
 .redes-container {
     display: flex;
+    flex-direction: column;
     gap: .5rem;
 }
 @media (min-width: 500px){
   .img-footer-container img {
-    width: 35%;
+    width: 45%;
   }
 }
 
 @media (min-width: 768px) {
+.footer-component {
+  display: flex;
+  align-items: center;
+}
   .footer-component p {
     font-size: 2.6rem;
   }
   .img-footer-container img{
-    width: 45%;
+    width: 40%;
   }
 
 }
@@ -51,6 +60,7 @@
 @media (min-width: 1260px) {
   .footer-component{
     align-items: flex-start;
+    margin-top: 2rem;
   }
   .img-footer-container {
     display: flex;
@@ -64,5 +74,11 @@
   }
   .img-footer-container {
     gap: 0;
+  }
+}
+
+@media (min-width: 900px){
+  .footer-component img {
+    width: 25%;
   }
 }

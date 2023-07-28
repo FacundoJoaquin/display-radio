@@ -3,7 +3,7 @@ import './locutor.css'
 const Locutor = () => {
   return (
     <div className='locutor-container'>
-        <img src={messi} alt="" />
+        <img src={messi} alt="locutor" />
     </div>
   )
 }
