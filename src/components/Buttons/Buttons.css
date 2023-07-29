@@ -32,3 +32,10 @@
   height: 2.5rem;
   color: white;
 }
+
+@media (max-width: 500px){
+  .play, .pause {
+    height: 3rem;
+    width: 9rem;
+  }
+}

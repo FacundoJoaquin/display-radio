@@ -43,7 +43,7 @@ const Reproductor = () => {
           max="2"
           step="0.2"
           value={volume}
-          onChange={handleVolumeChange}
+          onInput={handleVolumeChange}
           style={{ background: getSliderBackground() }}
         />
       </div>
