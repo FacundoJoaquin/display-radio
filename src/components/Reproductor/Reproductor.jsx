@@ -2,6 +2,8 @@ import "./reproductor.css";
 import { useRef, useState } from "react";
 import Pause from "../Buttons/Pause";
 import Play from "../Buttons/Play";
+import volumeUp from "../../assets/volume.svg";
+import volumeDown from "../../assets/volume-down.svg";
 
 const Reproductor = () => {
   const audioRef = useRef(null);
@@ -30,12 +32,35 @@ const Reproductor = () => {
     return `linear-gradient(to right, #DC202A ${percentage}%, #C3C7C6 ${percentage}%)`;
   };
 
+  const handleVolumeUp = () => {
+    if (volume < 2) {
+      const newVolume = parseFloat(volume) + 0.2;
+      setVolume(newVolume);
+      audioRef.current.volume = newVolume;
+    }
+  };
+
+  const handleVolumeDown = () => {
+    if (volume > 0) {
+      const newVolume = parseFloat(volume) - 0.2;
+      setVolume(newVolume);
+      audioRef.current.volume = newVolume;
+    }
+  };
+
   return (
     <div className="reproductor-container">
       <audio ref={audioRef} controls>
         <source src="https://radios.lu17.com:8401/livehd" type="audio/mpeg" />
       </audio>
+
       <div className="volume-bar-container">
+        <img
+          src={volumeDown}
+          alt="bajar volumen"
+          className="volume-buttons"
+          onClick={handleVolumeDown}
+        />
         <input
           className="volume-controller"
           type="range"
@@ -45,6 +70,12 @@ const Reproductor = () => {
           value={volume}
           onInput={handleVolumeChange}
           style={{ background: getSliderBackground() }}
+        />
+        <img
+          src={volumeUp}
+          alt="subir volumen"
+          className="volume-buttons"
+          onClick={handleVolumeUp}
         />
       </div>
 
