@@ -1,16 +1,55 @@
 .locutor-container {
-    height: 75%;
+    height: 90%;
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
 }
+.radio-programa {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 15%;
+    gap: 10%;
+}
+.radio-programa h2 {
+    font-family: Prompt, sans-serif;
+    font-weight: 500;
 
+}
+.radio-programa img {
+    width: 8rem;
+}
 .locutor-container img {
     height: 80%;
 }
 
+
+
+@media (min-width: 1200px) {
+    .locutor-img {
+        height: 10%;
+    }
+}
 @media (min-width: 768px) {
     .locutor-container img {
-        height: 100%;
+        height: 85%;
+    }
+    .radio-programa {
+        margin: 0;
+        justify-content: center;
+        gap: 20%;
+    }
+    .radio-programa img {
+        width: 11rem;
+    }
+    .radio-programa h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 400px) {
+    .locutor-container {
+        width: 100%;
     }
 }

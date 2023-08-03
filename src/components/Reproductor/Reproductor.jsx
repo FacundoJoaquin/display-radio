@@ -55,6 +55,8 @@ const Reproductor = () => {
       </audio>
 
       <div className="volume-bar-container">
+      {isPlaying? <Pause onClick={handlePause} isPlaying={isPlaying}/> : <Play onClick={handlePlay} isPlaying={isPlaying}/>}
+
         <img
           src={volumeDown}
           alt="bajar volumen"
@@ -79,10 +81,6 @@ const Reproductor = () => {
         />
       </div>
 
-      <div className="reproductor-controller">
-        <Pause onClick={handlePause} isPlaying={isPlaying} />
-        <Play onClick={handlePlay} isPlaying={isPlaying} />
-      </div>
     </div>
   );
 };

@@ -8,21 +8,20 @@
   justify-content: center;
 }
 .footer-component p {
-  font-family: 'Prompt', sans-serif;
+  font-family: "Prompt", sans-serif;
   font-size: 1.3rem;
   color: white;
 }
 .img-footer-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .volume-bar-container {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: .5rem;
 }
 .footer-component img {
   width: 65%;
@@ -41,23 +40,27 @@
   cursor: pointer;
 }
 .redes-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
-@media (min-width: 500px){
+@media (min-width: 350px) {
+  .footer-component {
+    align-items: center;
+  }
   .img-footer-container img {
-    width: 45%;
+    width: 55%;
   }
 }
 
 @media (min-width: 768px) {
-.footer-component {
-  display: flex;
-}
+  .footer-component {
+    display: flex;
+    align-items: center;
+  }
   .footer-component p {
     font-size: 2.6rem;
   }
-  .img-footer-container img{
+  .img-footer-container img {
     width: 40%;
   }
 
@@ -68,8 +71,8 @@
 }
 
 @media (min-width: 1260px) {
-  .footer-component{
-    align-items: flex-start;
+  .footer-component {
+    align-items: center;
   }
   .img-footer-container {
     display: flex;
@@ -86,7 +89,7 @@
   }
 }
 
-@media (min-width: 900px){
+@media (min-width: 900px) {
   .footer-component img {
     width: 25%;
   }

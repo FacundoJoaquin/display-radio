@@ -9,8 +9,8 @@ function App() {
   return (
     <div className="main">
       <div className="main-reproductor">
-        <Reproductor />
         <Locutor />
+        <Reproductor />
       </div>
       <div className="main-footer">
         <Banner />

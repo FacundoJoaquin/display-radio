@@ -33,9 +33,22 @@
   color: white;
 }
 
-@media (max-width: 500px){
+@media (min-width: 350px){
   .play, .pause {
-    height: 3rem;
-    width: 9rem;
+    height: 1.5rem;
+    width: 4rem;
+  }
+  .play svg, .pause svg {
+    width: 1rem;
+  }
+}
+
+@media (min-width: 700px){
+  .play, .pause {
+    height: 2.5rem;
+    width: 6.5rem;
+  }
+  .play svg, .pause svg {
+    width: 2rem;
   }
 }
