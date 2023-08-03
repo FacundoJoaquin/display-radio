@@ -35,6 +35,7 @@
         margin: 0;
         justify-content: center;
         gap: 20%;
+        height: 10%;
     }
     .radio-programa img {
         width: 11rem;
