@@ -45,8 +45,13 @@
     }
 }
 
-@media (min-width: 400px) {
+@media (min-width: 300px) {
     .locutor-container {
         width: 100%;
+    }
+    .radio-programa {
+        display: flex;
+        justify-content: center;
+        margin-left: 0;
     }
 }
