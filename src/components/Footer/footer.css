@@ -45,6 +45,9 @@
   text-align: center;
 }
 @media (max-width: 350px) {
+  .footer-component {
+    align-items: center;
+  }
   .img-footer-container img {
     width: 50%;
   }
@@ -64,11 +67,7 @@
     width: 55%;
   }
 }
-@media (max-width: 760px){
-  .img-footer-container img:first-child {
-    width: 40%;;
-  }
-}
+
 @media (min-width: 768px) {
   .footer-component {
     display: flex;

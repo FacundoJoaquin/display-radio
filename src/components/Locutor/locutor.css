@@ -52,6 +52,12 @@
     }
 }
 
+
+@media (min-width: 300px) and (max-width: 415px) {
+    .radio-programa h2 {
+        font-size: 1rem;
+    }
+}
 @media (min-width: 300px) {
     .locutor-container {
         width: 100%;
