@@ -46,6 +46,11 @@
   height: 0;
 }
 
+@media (max-width: 350px){
+  .volume-bar-container input[type="range"]{
+    width: 14rem;
+  }
+}
 
 @media (min-width: 768px) {
   .reproductor-container audio {

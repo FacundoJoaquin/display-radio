@@ -42,8 +42,21 @@
 .redes-container {
   display: flex;
   flex-direction: column;
+  text-align: center;
+}
+@media (max-width: 350px) {
+  .img-footer-container img {
+    width: 50%;
+  }
+  .redes-logos-div .redes {
+    width: 1.7rem;
+    height: 1.7rem;
+  }
 }
 @media (min-width: 350px) {
+  .reproductor-container {
+    padding: 0;
+  }
   .footer-component {
     align-items: center;
   }
@@ -51,7 +64,11 @@
     width: 55%;
   }
 }
-
+@media (max-width: 760px){
+  .img-footer-container img:first-child {
+    width: 40%;;
+  }
+}
 @media (min-width: 768px) {
   .footer-component {
     display: flex;
