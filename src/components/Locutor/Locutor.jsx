@@ -114,7 +114,7 @@ const Locutor = () => {
           setTitleToShow("FUTBOL EN #LA17");
           break;
         default:
-          setImageToShow(diegoCastro);  //FALTA ASSET DE RADIO MITRE
+          setImageToShow(diegoCastro); //FALTA ASSET DE RADIO MITRE
           setTitleToShow("RADIO MITRE");
           break;
       }
