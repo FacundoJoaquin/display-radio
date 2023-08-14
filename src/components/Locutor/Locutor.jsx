@@ -57,7 +57,7 @@ const Locutor = () => {
         case currentHour >= 13 && currentHour < 16:
           setImageToShow(fondoFutbol);
           setTitleToShow("COTIDIANO");
-          console.log(imageToShow)
+          console.log(imageToShow);
           break;
         case currentHour >= 16 && currentHour < 18:
           setImageToShow(diegoCastro);
@@ -137,7 +137,10 @@ const Locutor = () => {
         alt="locutor"
         style={{
           width:
-            imageToShow === "/assets/fondoNegro-6143a874.jpg" ? "100%" : "auto",
+            imageToShow === "/assets/fondoNegro-6143a874.jpg" ||
+            imageToShow === "/assets/fondoFutbol-46259580.jpg"
+              ? "100%"
+              : "auto",
           objectFit: "cover",
         }}
       />
