@@ -10,6 +10,7 @@ import Cotidiano from "../../assets/Cotidiano.png";
 import laNocheDelSur from "../../assets/laNocheDelSur.png";
 import laGranManana from "../../assets/laGranManana.png";
 import fondoNegro from "../../assets/fondoNegro.jpg";
+import fondoFutbol from "../../assets/fondoFutbol.jpg";
 
 const Locutor = () => {
   const [currentDay, setCurrentDay] = useState(new Date());
@@ -54,7 +55,7 @@ const Locutor = () => {
           setTitleToShow("LA SEGUNDA MAÑANA");
           break;
         case currentHour >= 13 && currentHour < 16:
-          setImageToShow(fondoNegro);
+          setImageToShow(fondoFutbol);
           setTitleToShow("COTIDIANO");
           break;
         case currentHour >= 16 && currentHour < 18:
