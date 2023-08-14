@@ -60,7 +60,7 @@ const Locutor = () => {
           console.log(imageToShow);
           break;
         case currentHour >= 16 && currentHour < 18:
-          setImageToShow(diegoCastro);
+          setImageToShow(fondoNegro); //diego castro
           setTitleToShow("TODO PASA");
           break;
         case currentHour >= 18 && currentHour < 21:
