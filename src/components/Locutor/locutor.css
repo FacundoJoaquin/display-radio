@@ -11,10 +11,11 @@
     align-items: center;
     margin-left: 15%;
     gap: 5%;
+    max-height: 4rem;
 }
 .radio-programa h2 {
     font-family: Prompt, sans-serif;
-    font-weight: 500;
+    font-weight: 800;
 
 }
 .radio-programa img {
@@ -42,10 +43,10 @@
         margin: 0;
         justify-content: center;
         gap: 20%;
-        height: 10%;
+        height: 100%;
     }
     .radio-programa img {
-        width: 11rem;
+        width: 9rem;
     }
     .radio-programa h2 {
         font-size: 2rem;

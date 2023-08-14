@@ -2,12 +2,14 @@ import { useEffect, useState } from "react";
 import la17 from "../../assets/la17-logo.png";
 import "./locutor.css";
 import messiImage from "../../assets/messi.png";
-import cristianRoldan from "../../assets/cristianRoldan.png";
-import christianDevia from "../../assets/christianDevia.png";
 import diegoCastro from "../../assets/diegoCastro.png";
 import fabioZapata from "../../assets/fabioZapata.png";
-import paolaBrossy from "../../assets/paolaBrossy.png";
-import robertoSuárez from "../../assets/robertoSuárez.png";
+import elQuintoPoder from "../../assets/elQuintoPoder.png";
+import segundaManana from "../../assets/segundaManana.png";
+import Cotidiano from "../../assets/Cotidiano.png";
+import laNocheDelSur from "../../assets/laNocheDelSur.png";
+import laGranManana from "../../assets/laGranManana.png";
+import fondoNegro from "../../assets/fondoNegro.jpg";
 
 const Locutor = () => {
   const [currentDay, setCurrentDay] = useState(new Date());
@@ -44,15 +46,15 @@ const Locutor = () => {
     if (currentDay && currentDay !== "Sábado" && currentDay !== "Domingo") {
       switch (true) {
         case currentHour >= 7 && currentHour < 10:
-          setImageToShow(christianDevia);
+          setImageToShow(elQuintoPoder);
           setTitleToShow("EL QUINTO PODER");
           break;
         case currentHour >= 10 && currentHour < 13:
-          setImageToShow(cristianRoldan);
+          setImageToShow(segundaManana);
           setTitleToShow("LA SEGUNDA MAÑANA");
           break;
         case currentHour >= 13 && currentHour < 16:
-          setImageToShow(robertoSuárez);
+          setImageToShow(fondoNegro);
           setTitleToShow("COTIDIANO");
           break;
         case currentHour >= 16 && currentHour < 18:
@@ -64,7 +66,7 @@ const Locutor = () => {
           setTitleToShow("CRÓNICA DE LA TARDE");
           break;
         case currentHour >= 21 && currentHour < 23:
-          setImageToShow(paolaBrossy);
+          setImageToShow(laNocheDelSur);
           setTitleToShow("LA NOCHE DEL SUR");
           break;
         default:
@@ -75,7 +77,7 @@ const Locutor = () => {
     } else if (currentDay === "Sábado") {
       switch (true) {
         case currentHour >= 9 && currentHour < 13:
-          setImageToShow(diegoCastro);
+          setImageToShow(laGranManana);
           setTitleToShow("LA GRAN MAÑANA");
           break;
         case currentHour >= 13 && currentHour < 14:
@@ -127,7 +129,14 @@ const Locutor = () => {
         <img src={la17} alt="" />
         <h2>{titleToShow}</h2>
       </div>
-      <img src={imageToShow} className="locutor-img" alt="locutor" />
+      <img
+        src={imageToShow}
+        className="locutor-img"
+        alt="locutor"
+        style={{ width: imageToShow === "/src/assets/fondoNegro.jpg" ? "100%" : "auto",
+        objectFit: "cover",
+      }}
+        />
     </div>
   );
 };
