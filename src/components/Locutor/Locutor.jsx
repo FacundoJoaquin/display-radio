@@ -57,6 +57,7 @@ const Locutor = () => {
         case currentHour >= 13 && currentHour < 16:
           setImageToShow(fondoFutbol);
           setTitleToShow("COTIDIANO");
+          console.log(imageToShow)
           break;
         case currentHour >= 16 && currentHour < 18:
           setImageToShow(diegoCastro);
