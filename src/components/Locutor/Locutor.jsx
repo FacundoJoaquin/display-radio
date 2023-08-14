@@ -133,10 +133,13 @@ const Locutor = () => {
         src={imageToShow}
         className="locutor-img"
         alt="locutor"
-        style={{ width: imageToShow === "/src/assets/fondoNegro.jpg" ? "110%" : "auto",
-        objectFit: "cover",
-      }}
-        />
+        style={{
+          width: imageToShow === "fondoNegro" ? "110%" : "auto",
+          height: "auto", 
+          objectFit: "cover", 
+          objectPosition: "center", 
+        }}
+      />
     </div>
   );
 };
