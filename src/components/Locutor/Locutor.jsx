@@ -10,8 +10,7 @@ import laNocheDelSur from "../../assets/laNocheDelSur.png";
 import laGranManana from "../../assets/laGranManana.png";
 import fondoMitre from "../../assets/fondoMitre.jpg";
 import fondoFutbol from "../../assets/fondoFutbol.jpg";
-import la17Parche from "../../assets/la17.png";
-
+import la17Parche from "../../assets/la17Parche.png";
 const Locutor = () => {
   const [currentDay, setCurrentDay] = useState(new Date());
   const [currentTime, setCurrentTime] = useState(new Date());
@@ -89,12 +88,8 @@ const Locutor = () => {
           setImageToShow(fondoFutbol);
           setTitleToShow("FUTBOL EN #LA17");
           break;
-        case currentHour >= 21 && currentHour < 24:
-          setImageToShow(fondoMitre);
-          setTitleToShow("RADIO MITRE");
-          break;
         default:
-          setImageToShow(fondoMitre); //FALTA ASSET DE RADIO MITRE
+          setImageToShow(fondoMitre);
           setTitleToShow("RADIO MITRE");
           break;
       }
@@ -132,7 +127,7 @@ const Locutor = () => {
       </div>
       <img
         src={imageToShow}
-        className="locutor-img"
+        className={`locutor-img ${imageToShow.includes("la17Parche") ? 'special-width' : ''}`}
         alt="locutor"
         style={{
           width:
@@ -141,6 +136,7 @@ const Locutor = () => {
               ? "100%"
               : "auto",
           objectFit: "cover",
+          
         }}
       />
     </div>

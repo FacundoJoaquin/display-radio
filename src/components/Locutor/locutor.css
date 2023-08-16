@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: end;
+    justify-content: space-around;
 }
 .radio-programa {
     width: 100%;
@@ -38,10 +38,12 @@
 
 }
 @media (min-width: 768px) {
-
+    .locutor-container {
+        justify-content: space-between;
+    }
     .radio-programa {
         margin: 0;
-        justify-content: center;
+        justify-content: space-around;
         gap: 20%;
         height: 100%;
     }
@@ -53,8 +55,17 @@
     }
 }
 
+@media (max-width: 520px) {
+    .special-width {
+        height: 50%;
+    }
+}
 
 @media (min-width: 300px) and (max-width: 415px) {
+    .special-width {
+        height: 40%;
+ 
+    }
     .radio-programa h2 {
         font-size: 1rem;
     }

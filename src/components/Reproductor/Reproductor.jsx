@@ -7,7 +7,7 @@ import volumeDown from "../../assets/volume-down.svg";
 
 const Reproductor = () => {
   const audioRef = useRef(null);
-  const [volume, setVolume] = useState(1);
+  const [volume, setVolume] = useState(0.5);
   const [isPlaying, setIsPlaying] = useState(false); // Estado para rastrear la reproducción
 
   const handlePlay = () => {
@@ -27,12 +27,12 @@ const Reproductor = () => {
   };
 
   const getSliderBackground = () => {
-    const percentage = ((volume - 0) / (2 - 0)) * 100;
+    const percentage = ((volume - 0) / (1 - 0)) * 100;
     return `linear-gradient(to right, #DC202A ${percentage}%, #C3C7C6 ${percentage}%)`;
   };
 
   const handleVolumeUp = () => {
-    if (volume < 2) {
+    if (volume < 1) {
       const newVolume = parseFloat(volume) + 0.2;
       setVolume(newVolume);
       audioRef.current.volume = newVolume;
@@ -66,8 +66,8 @@ const Reproductor = () => {
           className="volume-controller"
           type="range"
           min="0"
-          max="2"
-          step="0.2"
+          max="1"
+          step="0.1"
           value={volume}
           onInput={handleVolumeChange}
           style={{ background: getSliderBackground() }}
