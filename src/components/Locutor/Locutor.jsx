@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import la17 from "../../assets/la17-logo.png";
 import "./locutor.css";
-import messiImage from "../../assets/messi.png";
 import diegoCastro from "../../assets/diegoCastro.png";
 import fabioZapata from "../../assets/fabioZapata.png";
 import elQuintoPoder from "../../assets/elQuintoPoder.png";
@@ -9,8 +8,9 @@ import segundaManana from "../../assets/segundaManana.png";
 import Cotidiano from "../../assets/Cotidiano.png";
 import laNocheDelSur from "../../assets/laNocheDelSur.png";
 import laGranManana from "../../assets/laGranManana.png";
-import fondoNegro from "../../assets/fondoNegro.jpg";
+import fondoMitre from "../../assets/fondoMitre.jpg";
 import fondoFutbol from "../../assets/fondoFutbol.jpg";
+import la17Parche from '../../assets/la17.png';
 
 const Locutor = () => {
   const [currentDay, setCurrentDay] = useState(new Date());
@@ -51,16 +51,16 @@ const Locutor = () => {
           setTitleToShow("EL QUINTO PODER");
           break;
         case currentHour >= 10 && currentHour < 13:
-          setImageToShow(segundaManana);
+          setImageToShow(fondoFutbol);
           setTitleToShow("LA SEGUNDA MAÑANA");
+          console.log(imageToShow)
           break;
         case currentHour >= 13 && currentHour < 16:
-          setImageToShow(fondoFutbol);
+          setImageToShow(Cotidiano);
           setTitleToShow("COTIDIANO");
-          console.log(imageToShow);
           break;
         case currentHour >= 16 && currentHour < 18:
-          setImageToShow(fondoNegro); //diego castro
+          setImageToShow(diegoCastro); 
           setTitleToShow("TODO PASA");
           break;
         case currentHour >= 18 && currentHour < 21:
@@ -72,7 +72,7 @@ const Locutor = () => {
           setTitleToShow("LA NOCHE DEL SUR");
           break;
         default:
-          setImageToShow(diegoCastro); //FALTA ASSET DE RADIO MITRE
+          setImageToShow(fondoMitre); 
           setTitleToShow("RADIO MITRE");
           break;
       }
@@ -83,30 +83,30 @@ const Locutor = () => {
           setTitleToShow("LA GRAN MAÑANA");
           break;
         case currentHour >= 13 && currentHour < 14:
-          setImageToShow(messiImage); //VA RAUL PASARIN, NO ESTA SU FOTO
+          setImageToShow(la17Parche); //VA RAUL PASARIN, NO ESTA SU FOTO
           setTitleToShow("LA VOZ DE LA MESETA");
           break;
         case currentHour >= 14 && currentHour < 21:
-          setImageToShow(messiImage); //VA IMAGEN DE FUTBOL EN LA17
+          setImageToShow(fondoFutbol); 
           setTitleToShow("FUTBOL EN #LA17");
           break;
         case currentHour >= 21 && currentHour < 24:
-          setImageToShow(messiImage);
+          setImageToShow(fondoMitre);
           setTitleToShow("RADIO MITRE");
           break;
         default:
-          setImageToShow(diegoCastro); //FALTA ASSET DE RADIO MITRE
+          setImageToShow(fondoMitre); //FALTA ASSET DE RADIO MITRE
           setTitleToShow("RADIO MITRE");
           break;
       }
     } else if (currentDay === "Domingo") {
       switch (true) {
         case currentHour >= 9 && currentHour < 12:
-          setImageToShow(messiImage); //VA IMAGEN DE JULIO BALDA
+          setImageToShow(la17Parche); //VA IMAGEN DE JULIO BALDA
           setTitleToShow("ASÍ ES LA VIDA");
           break;
         case currentHour >= 12 && currentHour < 13:
-          setImageToShow(messiImage); //DICE RESUMEN
+          setImageToShow(la17Parche); //DICE RESUMEN
           setTitleToShow("PASAN COSAS");
           break;
         case currentHour >= 13 && currentHour < 14:
@@ -114,11 +114,11 @@ const Locutor = () => {
           setTitleToShow("LA HORA DE ESPAÑA");
           break;
         case currentHour >= 14 && currentHour < 21:
-          setImageToShow(fabioZapata); //IMAGEN DE FUTBOL
+          setImageToShow(fondoFutbol); 
           setTitleToShow("FUTBOL EN #LA17");
           break;
         default:
-          setImageToShow(diegoCastro); //FALTA ASSET DE RADIO MITRE
+          setImageToShow(fondoMitre); 
           setTitleToShow("RADIO MITRE");
           break;
       }
