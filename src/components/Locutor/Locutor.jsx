@@ -1,3 +1,4 @@
+import md5 from "md5";
 import { useEffect, useState } from "react";
 import la17 from "../../assets/la17-logo.png";
 import "./locutor.css";
@@ -10,13 +11,18 @@ import laNocheDelSur from "../../assets/laNocheDelSur.png";
 import laGranManana from "../../assets/laGranManana.png";
 import fondoMitre from "../../assets/fondoMitre.jpg";
 import fondoFutbol from "../../assets/fondoFutbol.jpg";
-import la17Parche from '../../assets/la17.png';
+import la17Parche from "../../assets/la17.png";
 
 const Locutor = () => {
   const [currentDay, setCurrentDay] = useState(new Date());
   const [currentTime, setCurrentTime] = useState(new Date());
   const [imageToShow, setImageToShow] = useState("");
   const [titleToShow, setTitleToShow] = useState("");
+
+  const futbolPath = "/src/assets/fondoFutbol.jpg";
+  const futbolHash = md5(futbolPath);
+  const mitrePath = "/src/assets/fondoMitre.jpg";
+  const mitreHash = md5(mitrePath);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -53,14 +59,14 @@ const Locutor = () => {
         case currentHour >= 10 && currentHour < 13:
           setImageToShow(fondoFutbol);
           setTitleToShow("LA SEGUNDA MAÑANA");
-          console.log(imageToShow)
+          console.log(imageToShow);
           break;
         case currentHour >= 13 && currentHour < 16:
           setImageToShow(Cotidiano);
           setTitleToShow("COTIDIANO");
           break;
         case currentHour >= 16 && currentHour < 18:
-          setImageToShow(diegoCastro); 
+          setImageToShow(diegoCastro);
           setTitleToShow("TODO PASA");
           break;
         case currentHour >= 18 && currentHour < 21:
@@ -72,7 +78,7 @@ const Locutor = () => {
           setTitleToShow("LA NOCHE DEL SUR");
           break;
         default:
-          setImageToShow(fondoMitre); 
+          setImageToShow(fondoMitre);
           setTitleToShow("RADIO MITRE");
           break;
       }
@@ -87,7 +93,7 @@ const Locutor = () => {
           setTitleToShow("LA VOZ DE LA MESETA");
           break;
         case currentHour >= 14 && currentHour < 21:
-          setImageToShow(fondoFutbol); 
+          setImageToShow(fondoFutbol);
           setTitleToShow("FUTBOL EN #LA17");
           break;
         case currentHour >= 21 && currentHour < 24:
@@ -114,11 +120,11 @@ const Locutor = () => {
           setTitleToShow("LA HORA DE ESPAÑA");
           break;
         case currentHour >= 14 && currentHour < 21:
-          setImageToShow(fondoFutbol); 
+          setImageToShow(fondoFutbol);
           setTitleToShow("FUTBOL EN #LA17");
           break;
         default:
-          setImageToShow(fondoMitre); 
+          setImageToShow(fondoMitre);
           setTitleToShow("RADIO MITRE");
           break;
       }
@@ -137,9 +143,9 @@ const Locutor = () => {
         alt="locutor"
         style={{
           width:
-            imageToShow === "/assets/fondoNegro-6143a874.jpg" ||
-            imageToShow === "/assets/fondoFutbol-46259580.jpg"
-              ? "100%"
+          imageToShow === futbolPath ||
+          imageToShow === mitrePath
+                    ? "100%"
               : "auto",
           objectFit: "cover",
         }}
