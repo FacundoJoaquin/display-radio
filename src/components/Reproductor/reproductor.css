@@ -27,7 +27,7 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-
+  cursor: pointer;
   /* Establecer el ancho y alto del control deslizante */
   width: 15rem;
   height: 10px;

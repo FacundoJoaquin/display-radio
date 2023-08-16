@@ -33,7 +33,7 @@ const Reproductor = () => {
 
   const handleVolumeUp = () => {
     if (volume < 1) {
-      const newVolume = parseFloat(volume) + 0.2;
+      const newVolume = parseFloat(volume) + 0.1;
       setVolume(newVolume);
       audioRef.current.volume = newVolume;
     }
@@ -41,7 +41,7 @@ const Reproductor = () => {
 
   const handleVolumeDown = () => {
     if (volume > 0) {
-      const newVolume = parseFloat(volume) - 0.2;
+      const newVolume = parseFloat(volume) - 0.1;
       setVolume(newVolume);
       audioRef.current.volume = newVolume;
     }
