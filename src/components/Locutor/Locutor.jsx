@@ -1,4 +1,3 @@
-import md5 from "md5";
 import { useEffect, useState } from "react";
 import la17 from "../../assets/la17-logo.png";
 import "./locutor.css";
@@ -19,10 +18,6 @@ const Locutor = () => {
   const [imageToShow, setImageToShow] = useState("");
   const [titleToShow, setTitleToShow] = useState("");
 
-  const futbolPath = "/src/assets/fondoFutbol.jpg";
-  const futbolHash = md5(futbolPath);
-  const mitrePath = "/src/assets/fondoMitre.jpg";
-  const mitreHash = md5(mitrePath);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -44,7 +39,6 @@ const Locutor = () => {
     ];
     const dayOfWeekName = daysOfWeek[currentTime.getDay()];
     setCurrentDay(dayOfWeekName);
-    console.log(currentDay);
   }, [currentTime, currentDay]);
 
   useEffect(() => {
@@ -59,7 +53,7 @@ const Locutor = () => {
         case currentHour >= 10 && currentHour < 13:
           setImageToShow(fondoFutbol);
           setTitleToShow("LA SEGUNDA MAÑANA");
-          console.log(imageToShow);
+          console.log(imageToShow, "se actualizo");
           break;
         case currentHour >= 13 && currentHour < 16:
           setImageToShow(Cotidiano);
@@ -143,9 +137,9 @@ const Locutor = () => {
         alt="locutor"
         style={{
           width:
-          imageToShow === futbolPath ||
-          imageToShow === mitrePath
-                    ? "100%"
+            imageToShow.includes("fondoFutbol") ||
+            imageToShow.includes("fondoMitre")
+              ? "100%"
               : "auto",
           objectFit: "cover",
         }}
