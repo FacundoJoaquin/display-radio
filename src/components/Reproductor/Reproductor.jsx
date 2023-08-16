@@ -7,7 +7,6 @@ import volumeDown from "../../assets/volume-down.svg";
 
 const Reproductor = () => {
   const audioRef = useRef(null);
-  console.log(audioRef);
   const [volume, setVolume] = useState(1);
   const [isPlaying, setIsPlaying] = useState(false); // Estado para rastrear la reproducción
 

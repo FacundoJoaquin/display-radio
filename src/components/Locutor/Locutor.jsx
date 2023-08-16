@@ -51,9 +51,8 @@ const Locutor = () => {
           setTitleToShow("EL QUINTO PODER");
           break;
         case currentHour >= 10 && currentHour < 13:
-          setImageToShow(fondoFutbol);
+          setImageToShow(segundaManana);
           setTitleToShow("LA SEGUNDA MAÑANA");
-          console.log(imageToShow, "se actualizo");
           break;
         case currentHour >= 13 && currentHour < 16:
           setImageToShow(Cotidiano);
@@ -123,7 +122,7 @@ const Locutor = () => {
           break;
       }
     }
-  }, [currentTime, currentDay]);
+  }, [currentTime, currentDay, imageToShow]);
 
   return (
     <div className="locutor-container">
