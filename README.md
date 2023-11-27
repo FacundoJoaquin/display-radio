@@ -6,7 +6,11 @@
 - Se me solicitó que el reproductor renderice la foto del locutor, cómo así también el nombre del programa que se está reproduciendo en ese momento.
 - El reproductor está enteramente desarrollado con React Js.
 - Se me facilitó una maqueta, la cual dejo a continuación para que puedan evalar el pedido solicitado con el desarrollo final.
-- Les dejo las URL de los reproductores en producción, por si quieren escuchar una buena radio patagonica 
+
+[![Maqueta](https://i.postimg.cc/dtyTR7sx/maqueta.jpg "Maqueta")](https://i.postimg.cc/dtyTR7sx/maqueta.jpg "Maqueta")
+
+
+## Les dejo las URL de los reproductores en producción, por si quieren escuchar una buena radio patagonica 
 
 
 
@@ -15,4 +19,3 @@
 - Paraiso FM: https://lu17.com/contenido/36025/fm-961-paraiso-online
 - Trelew Noticias: https://lu17.com/contenido/36028/fm-969-radio-trelew-noticias-online
 
-[![Maqueta](https://i.postimg.cc/dtyTR7sx/maqueta.jpg "Maqueta")](https://i.postimg.cc/dtyTR7sx/maqueta.jpg "Maqueta")
